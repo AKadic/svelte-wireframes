@@ -40,9 +40,9 @@
 	});
 </script>
 
-<div class="text-center">
+<div class="text-center py-64">
 	<Subtitle>{title}</Subtitle>
-	<div bind:this={container} class="mt-16 relative w-full h-64 overflow-hidden">
+	<div bind:this={container} class="mt-16 relative w-full h-8 md:h-16 overflow-hidden">
 		{#each Array.from({ length: numberOfCircles }) as _, index}
 			<div
 				bind:this={circles[index]}

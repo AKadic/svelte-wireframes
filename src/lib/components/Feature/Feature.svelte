@@ -8,7 +8,7 @@
 	export let reversed = false;
 </script>
 
-<div class="flex" class:flex-row-reverse={reversed}>
+<div class="flex py-16" class:flex-row-reverse={reversed}>
 	<div class="flex flex-col items-start flex-1 p-32">
 		<Subtitle>{title}</Subtitle>
 		<p class="mt-16">{subtitle}</p>

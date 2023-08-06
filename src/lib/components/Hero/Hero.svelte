@@ -22,7 +22,7 @@
 	{/if}
 
 	<div class="absolute left-0 right-0 top-0 bottom-0">
-		<div class="flex flex-col items-center justify-center p-32 h-full">
+		<div class="flex flex-col items-center justify-center p-32 h-full" class:text-white={blur}>
 			<Title>{title}</Title>
 
 			<div class="mt-16 w-1/4 text-center">
