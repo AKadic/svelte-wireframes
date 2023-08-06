@@ -1,12 +1,11 @@
 <script lang="ts">
-	import Link from '$lib/components/Link';
-	import Subtitle from '$lib/components/Subtitle';
-	import Text from '$lib/components/Text';
-	import Title from '$lib/components/Title';
+	import Link from '$lib/components/Link/Link.svelte';
+	import Text from '$lib/components/Text/Text.svelte';
+	import Title from '$lib/components/Title/Title.svelte';
 
 	export let title: String;
 	export let subtitle: String;
-	export let imageSrc: String | undefined;
+	export let imageSrc: String | undefined = undefined;
 	export let blur = false;
 </script>
 

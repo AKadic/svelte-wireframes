@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Link from '$lib/components/Link';
-	import Subtitle from '$lib/components/Subtitle';
-	import Text from '$lib/components/Text';
+	import Link from '$lib/components/Link/Link.svelte';
+	import Subtitle from '$lib/components/Subtitle/Subtitle.svelte';
+	import Text from '$lib/components/Text/Text.svelte';
 
 	export let title: String;
 	export let subtitle: String;

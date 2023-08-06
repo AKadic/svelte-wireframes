@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
-	import Subtitle from '$lib/components/Subtitle';
+	import Subtitle from '$lib/components/Subtitle/Subtitle.svelte';
 
 	export let title: String;
 
@@ -42,7 +42,7 @@
 
 <div class="text-center">
 	<Subtitle>{title}</Subtitle>
-	<div bind:this={container} class="mt-16 relative w-full h-16 overflow-hidden">
+	<div bind:this={container} class="mt-16 relative w-full h-64 overflow-hidden">
 		{#each Array.from({ length: numberOfCircles }) as _, index}
 			<div
 				bind:this={circles[index]}
