@@ -1,6 +1,7 @@
 <script lang="ts">
 	import CallToAction from '$lib/components/CallToAction/CallToAction.svelte';
 	import Feature from '$lib/components/Feature/Feature.svelte';
+	import Footer from '$lib/components/Footer/Footer.svelte';
 	import Hero from '$lib/components/Hero/Hero.svelte';
 	import SocialProof from '$lib/components/SocialProof/SocialProof.svelte';
 
@@ -33,3 +34,5 @@
 	title="Ready to get started?"
 	subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 />
+
+<Footer />
