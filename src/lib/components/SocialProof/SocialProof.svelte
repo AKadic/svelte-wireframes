@@ -3,7 +3,7 @@
 	import { gsap } from 'gsap';
 	import Subtitle from '$lib/components/Subtitle/Subtitle.svelte';
 
-	export let title: String;
+	export let title: string | undefined = undefined;
 
 	const numberOfCircles = 6;
 	const animationDuration = 2;
@@ -40,8 +40,11 @@
 	});
 </script>
 
-<div class="text-center py-64">
-	<Subtitle>{title}</Subtitle>
+<div class="text-center py-16">
+	{#if title}
+		<Subtitle>{title}</Subtitle>
+	{/if}
+
 	<div bind:this={container} class="mt-16 relative w-full h-8 md:h-16 overflow-hidden">
 		{#each Array.from({ length: numberOfCircles }) as _, index}
 			<div

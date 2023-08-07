@@ -3,36 +3,33 @@
 	import Feature from '$lib/components/Feature/Feature.svelte';
 	import Footer from '$lib/components/Footer/Footer.svelte';
 	import Hero from '$lib/components/Hero/Hero.svelte';
+	import Navigation from '$lib/components/Navigation/Navigation.svelte';
 	import SocialProof from '$lib/components/SocialProof/SocialProof.svelte';
-
-	const heroSubtitle = `DVL Logistics is jouw toonaangevende partner in logistiek. Gevestigd in Helmond, zijn wij gespecialiseerd in het leveren van hoogwaardige Home Delivery en Full Service Fulfillment diensten. Onze toewijding aan kwaliteit, ongeëvenaarde service en ongekende snelheid in transport vormt de kern van alles wat we doen. Bij DVL Logistics streven we ernaar om jouw verwachtingen te overtreffen en tegelijkertijd de normen in de logistieke wereld te bepalen.`;
 </script>
 
+<Navigation />
+
 <Hero
-	blur
-	title="Transport- en Koeriersbedrijf DVL Logistics."
-	subtitle={heroSubtitle}
-	imageSrc="https://images.pexels.com/photos/6347560/pexels-photo-6347560.jpeg"
+	title="Rapidly Prototype Websites with Svelte Wireframes"
+	subtitle="Let us help you design beatiful modern websites"
 />
 
-<SocialProof title="Trusted by the World’s Best Companies" />
+<SocialProof title="Made with Svelte Wireframes" />
 
 <Feature
-	title="Feature that is amazing"
-	subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-	imageSrc="https://images.pexels.com/photos/12725459/pexels-photo-12725459.jpeg"
+	title="Powered by Svelte"
+	subtitle="Use Svelte to prototype modern designs using the latest browser features."
 />
 
 <Feature
 	reversed
-	title="Feature that is amazing"
-	subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-	imageSrc="https://images.pexels.com/photos/5025667/pexels-photo-5025667.jpeg"
+	title="Choose from 20+ ready made Wireframes and Components and their variations."
+	subtitle="Pick and Choose from over 20+ ready made Components to quickly sketch out your ideas and see what works and doesnt. The components are optimized and lightweight, meaning you don't have to worry about the workings under the hood."
 />
 
 <CallToAction
-	title="Ready to get started?"
-	subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+	title="Let us handle the bulk of the work, you focus on designing"
+	subtitle="Let us handle the bulk of the work while you keep your focus on design."
 />
 
 <Footer />

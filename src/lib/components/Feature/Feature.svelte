@@ -2,13 +2,13 @@
 	import Link from '$lib/components/Link/Link.svelte';
 	import Subtitle from '$lib/components/Subtitle/Subtitle.svelte';
 
-	export let title: String;
-	export let subtitle: String;
-	export let imageSrc: String | undefined = undefined;
+	export let title: string;
+	export let subtitle: string;
+	export let imageSrc: string | undefined = undefined;
 	export let reversed = false;
 </script>
 
-<div class="flex" class:flex-row-reverse={reversed}>
+<div class="flex py-16" class:flex-row-reverse={reversed}>
 	<div class="flex-1 flex" class:pr-32={!reversed} class:pl-32={reversed}>
 		<div
 			class="flex flex-col items-start justify-center w-3/5 ml-auto"

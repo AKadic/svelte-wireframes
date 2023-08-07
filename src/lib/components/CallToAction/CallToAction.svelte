@@ -3,8 +3,8 @@
 	import Subtitle from '$lib/components/Subtitle/Subtitle.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
 
-	export let title: String;
-	export let subtitle: String;
+	export let title: string;
+	export let subtitle: string;
 </script>
 
 <div class="flex flex-col items-center w-2/5 text-center mx-auto p-32">
