@@ -43,7 +43,8 @@
 
 		const stem = document.getElementById('Stem')!;
 		const stemPath = stem.getElementsByTagName('path')![0];
-		const crack = document.getElementById('Crack')!;
+		const crack = document.getElementById('Crack_Base')!;
+		const crackBackground = document.getElementById('Crack_Background')!;
 
 		gsap
 			.timeline({
@@ -52,26 +53,64 @@
 					scrub: true
 				}
 			})
-			.from(stemPath, {
-				transformOrigin: 'bottom',
-				scale: 0
+			.fromTo(
+				stemPath,
+				{
+					transformOrigin: 'bottom',
+					opacity: 0.5,
+					scale: 0.35
+				},
+				{
+					opacity: 1,
+					scale: 0.45
+				}
+			)
+			.fromTo(
+				crack,
+				{
+					transformOrigin: '65px 36px',
+					opacity: 0.1,
+					scale: 0.15,
+					rotate: -15
+				},
+				{
+					opacity: 1,
+					scale: 0.35
+				},
+				'<'
+			)
+			.to(stemPath, {
+				scale: 1
 			})
-			.from(crack, {
-				transformOrigin: '108px center',
-				scale: 0
-			});
+			.to(
+				crack,
+				{
+					rotate: 0,
+					scale: 1
+				},
+				'<'
+			)
+			.from(
+				crackBackground,
+				{
+					transformOrigin: '85px 36px',
+					opacity: 0,
+					scale: 0.75
+				},
+				'<'
+			);
 	});
 </script>
 
 <Hero title="The Rose That Grew From Concrete" />
 
+<div class="line">
+	<Text>Did you hear about the rose that grew</Text>
+</div>
+
 <div class="w-3/5 mx-auto h-screen flex justify-around items-start">
 	<div class="h-full flex flex-col gap-16">
 		<div class="flex flex-col items-start gap-8">
-			<div class="line">
-				<Text>Did you hear about the rose that grew</Text>
-			</div>
-
 			<div class="line">
 				<Text>from a crack in the concrete?</Text>
 			</div>
