@@ -4,7 +4,7 @@
 	import { onMount } from 'svelte';
 	import Hero from '$lib/components/Hero/Hero.svelte';
 	import Text from '$lib/components/Text/Text.svelte';
-	import StemSvg from '$lib/assets/Rose/Stem.svelte';
+	import ConcreteRose from '$lib/assets/Rose/ConcreteRose.svelte';
 
 	onMount(() => {
 		gsap.registerPlugin(ScrollTrigger);
@@ -41,17 +41,23 @@
 				)
 		);
 
-		const stem = gsap.utils.toArray<HTMLElement>('.stem');
+		const stem = document.getElementById('Stem')!;
+		const stemPath = stem.getElementsByTagName('path')![0];
+		const crack = document.getElementById('Crack')!;
 
 		gsap
 			.timeline({
 				scrollTrigger: {
 					trigger: stem,
-					scrub: true,
-					start: 25
+					scrub: true
 				}
 			})
-			.from(stem, {
+			.from(stemPath, {
+				transformOrigin: 'bottom',
+				scale: 0
+			})
+			.from(crack, {
+				transformOrigin: '108px center',
 				scale: 0
 			});
 	});
@@ -74,9 +80,7 @@
 		<div class="h-full">
 			<div class="sticky top-1/4">
 				<div class=" h-[480px] flex justify-center">
-					<div class="stem object-bottom">
-						<StemSvg />
-					</div>
+					<ConcreteRose />
 				</div>
 			</div>
 		</div>
