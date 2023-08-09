@@ -12,36 +12,73 @@
 		const lines = gsap.utils.toArray<HTMLElement>('.line');
 
 		lines.map((line) =>
-			gsap.fromTo(
-				line,
-				{
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: line,
+						scrub: true
+					}
+				})
+				.from(line, {
 					opacity: 0,
-					x: '-5em'
-				},
-				{
-					scrollTrigger: line,
-					opacity: 1,
-					x: 0
-				}
-			)
+					x: '-4em'
+				})
+				.to(
+					line,
+
+					{
+						opacity: 1,
+						x: 0
+					}
+				)
+				.to(
+					line,
+
+					{
+						opacity: 0,
+						x: 0
+					}
+				)
 		);
+
+		const stem = gsap.utils.toArray<HTMLElement>('.stem');
+
+		gsap
+			.timeline({
+				scrollTrigger: {
+					trigger: stem,
+					scrub: true,
+					start: 25
+				}
+			})
+			.from(stem, {
+				scale: 0
+			});
 	});
 </script>
 
 <Hero title="The Rose That Grew From Concrete" />
 
-<div class="w-3/5 mx-auto h-screen flex justify-around items-center">
-	<div class="sticky top-0 h-[480px]">
-		<StemSvg />
-	</div>
+<div class="w-3/5 mx-auto h-screen flex justify-around items-start">
+	<div class="h-full flex flex-col gap-16">
+		<div class="flex flex-col items-start gap-8">
+			<div class="line">
+				<Text>Did you hear about the rose that grew</Text>
+			</div>
 
-	<div class="flex flex-col gap-5">
-		<div class="line">
-			<Text>Did you hear about the rose that grew</Text>
+			<div class="line">
+				<Text>from a crack in the concrete?</Text>
+			</div>
 		</div>
 
-		<div class="line">
-			<Text>from a crack in the concrete?</Text>
+		<div class="h-full">
+			<div class="sticky top-1/4">
+				<div class=" h-[480px] flex justify-center">
+					<div class="stem object-bottom">
+						<StemSvg />
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
