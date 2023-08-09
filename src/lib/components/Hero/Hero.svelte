@@ -3,9 +3,10 @@
 	import Text from '$lib/components/Text/Text.svelte';
 	import Title from '$lib/components/Title/Title.svelte';
 
-	export let title: String;
-	export let subtitle: String;
-	export let imageSrc: String | undefined = undefined;
+	export let title: string | undefined = undefined;
+	export let subtitle: string | undefined = undefined;
+	export let cta: string | undefined = undefined;
+	export let imageSrc: string | undefined = undefined;
 	export let blur = false;
 </script>
 
@@ -23,15 +24,21 @@
 
 	<div class="absolute left-0 right-0 top-0 bottom-0">
 		<div class="flex flex-col items-center justify-center p-32 h-full" class:text-white={blur}>
-			<Title>{title}</Title>
+			{#if title}
+				<Title>{title}</Title>
+			{/if}
 
-			<div class="mt-16 w-1/4 text-center">
-				<Text>{subtitle}</Text>
-			</div>
+			{#if subtitle}
+				<div class="mt-16 w-1/4 text-center">
+					<Text>{subtitle}</Text>
+				</div>
+			{/if}
 
-			<div class="mt-8 w-1/5">
-				<Link>Start free trial</Link>
-			</div>
+			{#if cta}
+				<div class="mt-8 w-1/5">
+					<Link>{cta}</Link>
+				</div>
+			{/if}
 		</div>
 	</div>
 </div>
