@@ -45,6 +45,8 @@
 		const stemPath = stem.getElementsByTagName('path')![0];
 		const crack = document.getElementById('Crack_Base')!;
 		const crackBackground = document.getElementById('Crack_Background')!;
+		const q = gsap.utils.selector(crack);
+		const crackSegemnts = q('path');
 
 		gsap
 			.timeline({
@@ -71,7 +73,7 @@
 					transformOrigin: '65px 36px',
 					opacity: 0.1,
 					scale: 0.15,
-					rotate: -15
+					rotate: -24
 				},
 				{
 					opacity: 1,
@@ -87,6 +89,13 @@
 				{
 					rotate: 0,
 					scale: 1
+				},
+				'<'
+			)
+			.from(
+				crackSegemnts,
+				{
+					fill: '#b57b18'
 				},
 				'<'
 			)
@@ -118,7 +127,7 @@
 
 		<div class="h-full">
 			<div class="sticky top-1/4">
-				<div class=" h-[480px] flex justify-center">
+				<div class="svg h-[480px] flex justify-center svg">
 					<ConcreteRose />
 				</div>
 			</div>
