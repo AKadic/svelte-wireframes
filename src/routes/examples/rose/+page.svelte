@@ -42,9 +42,12 @@
 		);
 
 		const stem = document.getElementById('Stem')!;
-		const stemPath = stem.getElementsByTagName('path')![0];
 		const crack = document.getElementById('Crack_Base')!;
 		const crackBackground = document.getElementById('Crack_Background')!;
+		const plant = document.getElementById('Plant')!;
+		const leaf = document.getElementById('Leaf')!;
+		const qLeaf = gsap.utils.selector(leaf);
+		const leafPath = qLeaf('path');
 		const q = gsap.utils.selector(crack);
 		const crackSegemnts = q('path');
 
@@ -56,7 +59,7 @@
 				}
 			})
 			.fromTo(
-				stemPath,
+				plant,
 				{
 					transformOrigin: 'bottom',
 					opacity: 0.5,
@@ -81,7 +84,7 @@
 				},
 				'<'
 			)
-			.to(stemPath, {
+			.to(plant, {
 				scale: 1
 			})
 			.to(
@@ -96,6 +99,23 @@
 				crackSegemnts,
 				{
 					fill: '#b57b18'
+				},
+				'<'
+			)
+			.from(
+				leafPath,
+				{
+					fill: '#fff'
+				},
+				'<'
+			)
+			.from(
+				leaf,
+				{
+					transformOrigin: 'center right',
+					opacity: 0,
+					rotate: 120,
+					scale: 0
 				},
 				'<'
 			)
