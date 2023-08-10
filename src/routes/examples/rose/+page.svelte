@@ -133,41 +133,58 @@
 
 <Hero title="The Rose That Grew From Concrete" />
 
-<div class="line">
-	<Text>Did you hear about the rose that grew</Text>
-</div>
-
-<div class="w-3/5 mx-auto h-screen flex justify-around items-start">
-	<div class="h-full flex flex-col gap-16">
-		<div class="flex flex-col items-start gap-8">
-			<div class="line">
-				<Text>from a crack in the concrete?</Text>
-			</div>
-		</div>
-
-		<div class="h-full">
+<div class="w-3/5 mx-auto flex justify-around items-start">
+	<div class="flex gap-16">
+		<div>
 			<div class="sticky top-1/4">
 				<div class="svg h-[480px] flex justify-center svg">
 					<ConcreteRose />
 				</div>
 			</div>
 		</div>
+
+		<div>
+			<div class="h-screen flex flex-col justify-around items-start gap-8">
+				<div class="line">
+					<Text>Did you hear about the rose that grew</Text>
+				</div>
+
+				<div class="line">
+					<Text>from a crack in the concrete?</Text>
+				</div>
+			</div>
+
+			<div class="h-screen flex flex-col justify-around items-start gap-8">
+				<div class="line">
+					<Text>Proving nature's law is wrong it</Text>
+				</div>
+
+				<div class="line">
+					<Text>learned to walk with out having feet.</Text>
+				</div>
+			</div>
+
+			<div class="h-screen flex flex-col justify-around items-start gap-8">
+				<div class="line">
+					<Text>Funny it seems, but by keeping its dreams,</Text>
+				</div>
+
+				<div class="line">
+					<Text>it learned to breathe fresh air.</Text>
+				</div>
+			</div>
+
+			<div class="h-screen flex flex-col justify-around items-start gap-8">
+				<div class="line">
+					<Text>Long live the rose that grew from concrete</Text>
+				</div>
+
+				<div class="line">
+					<Text>when no one else ever cared.</Text>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
-
-<Hero
-	title="Proving nature's law is wrong it
-           learned to walk with out having feet."
-/>
-
-<Hero
-	title="Funny it seems, but by keeping its dreams,
-           it learned to breathe fresh air."
-/>
-
-<Hero
-	title="Long live the rose that grew from concrete
-           when no one else ever cared."
-/>
 
 <Hero title="- Tupac Shakur" />
